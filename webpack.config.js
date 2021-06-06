@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 const webpackConfig = {
@@ -5,7 +6,8 @@ const webpackConfig = {
 
 	output: {
 		filename: "main.js",
-		path: path.resolve(__dirname, "dist")
+		path: path.resolve(__dirname, "dist"),
+    clean: true
 	},
 
   mode: "development",
@@ -30,7 +32,14 @@ const webpackConfig = {
         type: "asset"
       }
     ]
-  }
+  },
+
+  plugins:[
+    new HtmlWebpackPlugin({
+      title:'JS Starter with Webpack',
+      template: path.resolve(__dirname,"src","index.html")
+    })
+  ]
 
 };
 
