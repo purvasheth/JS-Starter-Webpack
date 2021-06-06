@@ -1,4 +1,3 @@
-import './App.css'
 import _ from "lodash"
 const App = ({ name }) => {
 	return `

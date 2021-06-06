@@ -1,7 +1,19 @@
-h1 {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+h1, h3 {
   color: royalblue;
 }
 
 h2{
   color: orangered;
 }
+
+.container {
+  max-width: 700px;
+  padding: 2rem;
+  width: 80%;
+  margin:auto;
+  font-family: 'Lato', sans-serif;
+
+}
+
