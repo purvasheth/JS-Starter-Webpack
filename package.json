@@ -1,0 +1,23 @@
+{
+  "name": "js-starter-with-webpack",
+  "version": "1.0.0",
+  "description": "Use to have cool webpack features on your vanillaJS project",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "browserslist": "> 0.25%, not dead",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Purva Sheth",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "webpack": "^5.38.1"
+  }
+}
