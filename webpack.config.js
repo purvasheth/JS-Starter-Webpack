@@ -5,12 +5,12 @@ const webpackConfig = {
 	entry: path.resolve(__dirname, "src", "index.js"),
 
 	output: {
-		filename: "main.js",
+		filename: "[name].bundle.js",
 		path: path.resolve(__dirname, "dist"),
     clean: true
 	},
 
-  mode: "development",
+  mode: "production",
 
   module:{
     rules:[
@@ -39,7 +39,20 @@ const webpackConfig = {
       title:'JS Starter with Webpack',
       template: path.resolve(__dirname,"src","index.html")
     })
-  ]
+  ],
+
+  optimization: {
+    splitChunks:{
+      cacheGroups:{
+        node_vendors:{
+          name:"vendor",
+          test: /[\\/]node_modules[\\/]/,
+          chunks: "all",
+          priority: 1
+        }
+      }
+    }
+  }
 
 };
 
